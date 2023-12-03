@@ -37,8 +37,6 @@ dim(dat01) # Després d'eliminar dades.
 
 Observem que només hem eliminat 5 files, i que, per tant, no ens afectarà molt.
 
-\newpage
-
 Observem la correlació:
 
 ```{r}
@@ -58,8 +56,6 @@ cortest.bartlett(cor(dat01), n=dim(dat01))
 ```
 Observem que el pvalor és menor a una alfa de l'1%, per tant, hi ha correlació entre variables.
 
-\newpage
-
 Normalitat multivariada:
 
 ```{r}
@@ -77,8 +73,6 @@ abline(h=1, lwd=2, col="red", lty = 2)
 
 Observem que a partir de la quarta component comença a sedimentar. Veiem que a partir de la tercera pca, obtenim un 80% de la variància.
 
-\newpage
-
 Generem la nova matriu de dades:
 
 ```{r}
@@ -89,8 +83,6 @@ facto.rota=principal(dat01, nfactors = 3, rotate = "varimax")
 facto.rota$loadings #
 ```
 
-\newpage
-
 Veiem com afecta cada variable a les components
 
 ```{r}
@@ -99,8 +91,6 @@ facto.rota$communality
 ```
 
 Observem que les variables queden ordenats per ordre d'importància, en la PR1, són aquelles que el seu valor supera el 0,7, Pr2 és la segona i Pr3 la tercera, per tant, les variables que tenen més pes queden agrupades dins de Pr1.
-
-\newpage
 
 Comuns:
 
@@ -113,8 +103,6 @@ Puntuacions:
 ```{r}
 head(facto.rota$scores)
 ```
-
-\newpage
 
 ### Exercici 2:
 
@@ -140,8 +128,6 @@ spam.rpart <- rpart(yesno ~ crl.tot +
 
 prp(spam.rpart, extra=2)
 ```
-
-\newpage
 
 Fem una taula de sensibilitat i especificitat:
 
@@ -181,8 +167,6 @@ summary(spam.logis)
 Observem els resultats, i podem deduir que com més grans siguin els números de la columna "Estimate" relacionada amb les variables "ctr.tot, dollar, bang, money i n000", les probabilitats que siguin spam augmenten.
 Veiem que "make" no surt marcada, i per tant es podria considerar treure-la del model.
 
-\newpage
-
 ### Exercici 3:
 
 Llegim i visualitzem les dades:
@@ -206,8 +190,6 @@ Hem fet un model classificador/arbre de clarificació el qual surt exposat en el
 Observem que en el cas dels votants conservadors, per la part esquerra del dendrograma, els votants conservadors consideren el "Hague" si és més gran o igual que 4. En el cas de "political knowledge" el consideren si és més gran o igual que 2.
 
 Veiem que en el cas dels votants laboristes, per la part dreta del dendrograma, els votants conservadors consideren el "political knowledge" si és superior o igual que 1.
- 
-\newpage
 
 ### Exercici 4:
 
@@ -223,8 +205,6 @@ summary(dat4)
 ```
 
 Observem, després de fer el summary, que el GPA no té molt de sentit, ja que dona per sobre de 4. Realment les notes del GPA van de 0 a 4.
-
-\newpage
 
 Eliminem dades que no pertoquen, en aquest cas, eliminarem només les dades que el GPA sigui superior a 4:  
 
@@ -242,8 +222,6 @@ dim(dat4_2) # Després d'eliminar dades.
 ```
 Ens adonem que només hem eliminat un cas, per tant, podem pensar que era una dada equivocada.
 També és molt positiu, ja que en estar eliminant només una dada i no moltes, no ens afectarà molt.
-
-\newpage
 
 Fem el model, en tenir les dades contínues, fem una regressió estàndard:
 
