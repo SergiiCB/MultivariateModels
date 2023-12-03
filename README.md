@@ -1,25 +1,4 @@
----
-title: "Construcció de models multivariants"
-author: "Sergi Cozar Badia"
-date: "2023-01-20"
-output:
-  pdf_document: default
----
-
-```{r, echo=FALSE, results=FALSE, include= FALSE}
-# Carreguem les llibreries i seleccionem el directori:
-
-require("rpart")
-  require("rpart.plot")
-  require("stats")
-  require("dplyr")
-  require("ggplot2")
-  require("ggfortify")
-  require("factoextra")
-  require("psych")
-  require("mvnormtest")
-  require(ade4)
-```
+Construcció de models multivariants
 
 ### Exercici 1:
 
