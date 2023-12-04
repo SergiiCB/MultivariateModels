@@ -4,7 +4,6 @@ author: "Sergi Cozar Badia"
 date: "2023-01-20"
 output:
   pdf_document: default
-  html_document: default
 ---
 
 ```{r, echo=FALSE, results=FALSE, include= FALSE}
